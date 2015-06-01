@@ -1,10 +1,7 @@
-
-
 var cc = require('..')
-var assert = require('assert')
-
+var tap = require('tap')
 
 //throw on invalid json
-assert.throws(function () {
+tap.throws(function () {
   cc(__dirname + '/broken.json')
 })

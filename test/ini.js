@@ -1,18 +1,14 @@
-
-
-var cc =require('..')
+var cc = require('..')
 var INI = require('ini')
-var assert = require('assert')
+var tap = require('tap')
 
 function test(obj) {
 
   var _json, _ini
   var json = cc.parse (_json = JSON.stringify(obj))
   var ini = cc.parse (_ini = INI.stringify(obj))
-console.log(_ini, _json)
-  assert.deepEqual(json, ini)
+  tap.deepEqual(json, ini)
 }
 
 
 test({hello: true})
-

@@ -1,5 +1,5 @@
-
 var cc = require('..')
 
-//should not throw
-cc(__dirname, 'non_existing_file')
+require('tap').doesNotThrow(function () {
+  cc(__dirname, 'non_existing_file')
+})

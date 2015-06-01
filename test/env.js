@@ -1,7 +1,5 @@
 var cc = require('..')
-var assert = require('assert')
-
-assert.deepEqual({
+require('tap').deepEqual({
   hello: true
 }, cc.env('test_', {
   'test_hello': true,
